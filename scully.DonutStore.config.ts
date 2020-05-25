@@ -4,5 +4,11 @@ export const config: ScullyConfig = {
   projectName: 'DonutStore',
   outDir: './dist/static',
   routes: {
+    '/blog/:id': {
+      type: 'contentFolder',
+      id: {
+        folder: "./blog"
+      }
+    },
   }
 };

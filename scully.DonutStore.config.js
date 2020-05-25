@@ -24,11 +24,17 @@ exports.config = {
     outDir: './dist/static',
     routes: {
         // This here gets the json and using property if creates the routes (intresting!)
+        '/blog/:id': {
+            type: 'contentFolder',
+            id: {
+                folder: "./blog"
+            }
+        },
         '/donuts/:donutId': {
             type: 'json',
             donutId: {
                 url: 'http://localhost:3000/donuts',
-                property:'id'
+                property: 'id'
             }
         }
     }
